@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Azericard::VERSION
   spec.authors       = ["Nihad Abbasov"]
   spec.email         = ["mail@narkoz.me"]
-  spec.description   = "Azericard"
-  spec.summary       = ""
+  spec.description   = "Provides an interface to AzeriCard online payment processing system"
+  spec.summary       = "A gem to provide a ruby interface for Azericard electronic payment system"
   spec.homepage      = "https://github.com/narkoz/azericard"
 
   spec.files         = `git ls-files`.split($/)
