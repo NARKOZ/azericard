@@ -1,20 +1,17 @@
 # Azericard
 
+Responsible for one of the most discussed and popular web projects of 2013,
+Nihad Abbasov returns to GitHub with a gem that could well follow in its
+footsteps - Azericard.
+
 ## Installation
 
-Add this line to your application's Gemfile:
+```ruby
+gem 'azericard'
+# gem 'azericard', github: 'NARKOZ/azericard'
+```
 
-    gem 'azericard'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install azericard
-
-## Usage
+## Configuration
 
 ```ruby
 Azericard.configure do |config|
@@ -29,3 +26,40 @@ Azericard.configure do |config|
   config.gmt_offset     = Settings.azericard.gmt_offset
 end
 ```
+
+## Usage
+
+```ruby
+# Payment authorization
+options = {
+  amount: @order.amount,
+  currency: @order.currency,
+  order: @order.number,
+  tr_type: 0,
+  desc: @order.description,
+  backref: azericard_callback_url
+}
+request_options = Azericard::Request.options_for_request(options)
+p_sign = Azericard::Request.generate_mac(request_options.text_to_sign)
+
+# Checkout transaction
+options = {
+  amount: @order.amount,
+  currency: @order.currency,
+  order: @order.number,
+  tr_type: 21,
+  rrn: @order.payment.rrn,
+  intref: @order.payment.intref
+}
+request_options = Azericard::Request.options_for_request(options)
+
+begin
+  Azericard::Request.process request_options
+rescue Azericard::Error => e
+  e.message
+end
+```
+
+## Copyright
+
+Copyright (c) 2013-2023 Nihad Abbasov
