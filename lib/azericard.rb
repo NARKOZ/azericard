@@ -1,7 +1,7 @@
+require 'azericard/version'
 require 'azericard/configuration'
 require 'azericard/error'
 require 'azericard/request'
-require 'azericard/version'
 require 'typhoeus'
 
 module Azericard
