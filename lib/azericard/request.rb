@@ -14,6 +14,9 @@ module Azericard
         ssl_verifypeer: false,
         ssl_verifyhost: 2,
         cainfo: 'a.cer',
+        headers: {
+          "User-Agent" => Azericard.user_agent
+        },
         body: {
           "AMOUNT"    => request_options.amount,
           "CURRENCY"  => request_options.currency,
