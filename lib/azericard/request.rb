@@ -47,14 +47,14 @@ module Azericard
     # @param [Hash] options
     # @return [Azericard::AzericardOptions]
     def self.options_for_request(options={})
-      nonce      = SecureRandom.hex(8)
-      timestamp  = Time.now.utc.strftime('%Y%m%d%H%M%S')
-      merch_name = Azericard.merchant_name
-      merch_url  = Azericard.merchant_url
-      terminal   = Azericard.terminal.to_s
-      email      = Azericard.merchant_email
-      country    = Azericard.country_code
-      merch_gmt  = Azericard.gmt_offset
+      nonce      = options.fetch :nonce      , SecureRandom.hex(8)
+      timestamp  = options.fetch :timestamp  , Time.now.utc.strftime('%Y%m%d%H%M%S')
+      merch_name = options.fetch :merch_name , Azericard.merchant_name
+      merch_url  = options.fetch :merch_url  , Azericard.merchant_url
+      terminal   = options.fetch :terminal   , Azericard.terminal.to_s
+      email      = options.fetch :email      , Azericard.merchant_email
+      country    = options.fetch :country    , Azericard.country_code
+      merch_gmt  = options.fetch :merch_gmt  , Azericard.gmt_offset
 
       desc = backref = rrn = intref = nil
 
