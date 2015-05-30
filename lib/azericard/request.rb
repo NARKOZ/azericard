@@ -13,7 +13,7 @@ module Azericard
         followlocation: true,
         ssl_verifypeer: false,
         ssl_verifyhost: 2,
-        sslversion: :tlsv1,
+        sslversion: 'tlsv1.2',
         ssl_cipher_list: 'RC4-SHA',
         headers: {
           "User-Agent" => Azericard.user_agent
