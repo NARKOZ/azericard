@@ -14,7 +14,7 @@ module Azericard
         ssl_verifypeer: false,
         ssl_verifyhost: 2,
         sslversion: 'tlsv1.2',
-        ssl_cipher_list: 'RC4-SHA',
+        ssl_cipher_list: 'ECDHE-RSA-AES256-GCM-SHA384',
         headers: {
           "User-Agent" => Azericard.user_agent
         },
