@@ -1,8 +1,6 @@
 # Azericard
 
-Responsible for one of the most discussed and popular web projects of 2013,
-Nihad Abbasov returns to GitHub with a gem that could well follow in its
-footsteps - Azericard.
+Unoffical Ruby interface to AzeriCard online payment processing system.
 
 ## Legal
 
