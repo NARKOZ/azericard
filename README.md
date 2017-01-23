@@ -4,6 +4,12 @@ Responsible for one of the most discussed and popular web projects of 2013,
 Nihad Abbasov returns to GitHub with a gem that could well follow in its
 footsteps - Azericard.
 
+## Legal
+
+This code is in no way affiliated with, authorised, maintained, sponsored or
+endorsed by AzeriCard LLC or any of its affiliates or subsidiaries. This is an
+independent and unofficial. Use at your own risk.
+
 ## Installation
 
 ```ruby
