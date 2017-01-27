@@ -1,18 +1,16 @@
-# Azericard
+# A+Card
 
 Unoffical Ruby interface to AzeriCard online payment processing system.
 
-## Legal
-
-This code is in no way affiliated with, authorised, maintained, sponsored or
-endorsed by AzeriCard LLC or any of its affiliates or subsidiaries. This is an
-independent and unofficial. Use at your own risk.
+WARNING: This code is in no way affiliated with, authorised, maintained,
+sponsored or endorsed by AzeriCard LLC or any of its affiliates or subsidiaries.
+This is an independent and unofficial. Use at your own risk.
 
 ## Installation
 
 ```ruby
 gem 'azericard'
-# gem 'azericard', github: 'NARKOZ/azericard'
+# gem 'azericard', github: 'NARKOZ/apluscard'
 ```
 
 ## Configuration
