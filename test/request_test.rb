@@ -1,7 +1,7 @@
-require 'test/unit'
+require 'minitest/autorun'
 require 'azericard'
 
-class RequestTest < Test::Unit::TestCase
+class RequestTest < Minitest::Test
   def setup
     Azericard.endpoint   = 'https://example.com/cgi-bin/cgi_link'
     Azericard.terminal   = '12345678'
@@ -31,7 +31,7 @@ class RequestTest < Test::Unit::TestCase
       backref: 'https://shop.example.com'
     }
     request_options = Azericard::Request.options_for_request(options)
-    assert (/422\.53AZN945328402311Description8Merchant28https:\/\/merchant\.example\.com-81234567820merchant@example\.com102AZ2\+4/).match request_options.text_to_sign
+    assert (/422\.53AZN945328402311Description8Merchant28https:\/\/merchant\.example\.com81234567820merchant@example\.com102AZ2\+4/).match request_options.text_to_sign
 
     options = {
       amount: '22.5',

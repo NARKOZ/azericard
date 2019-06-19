@@ -1,7 +1,7 @@
-require 'test/unit'
+require 'minitest/autorun'
 require 'azericard'
 
-class ConfigurationTest < Test::Unit::TestCase
+class ConfigurationTest < Minitest::Test
   def teardown
     Azericard.reset
   end

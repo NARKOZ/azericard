@@ -1,3 +1,6 @@
+require 'openssl'
+require 'securerandom'
+
 module Azericard
   module Request
     # @param [Azericard::AzericardOptions] request_options
@@ -83,7 +86,7 @@ module Azericard
         backref = options.fetch(:backref)
 
         text_to_sign = "#{amount.size}#{amount}#{currency.size}#{currency}#{order.size}#{order}" \
-          "#{desc.size}#{desc}#{merch_name.size}#{merch_name}#{merch_url.size}#{merch_url}-" \
+          "#{desc.size}#{desc}#{merch_name.size}#{merch_name}#{merch_url.size}#{merch_url}" \
           "#{terminal.size}#{terminal}#{email.size}#{email}#{tr_type.size}#{tr_type}#{country.size}#{country}" \
           "#{merch_gmt.size}#{merch_gmt}#{timestamp.size}#{timestamp}#{nonce.size}#{nonce}#{backref.size}#{backref}"
       elsif tr_type == '21' || tr_type == '24'
