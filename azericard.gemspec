@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "azericard"
   spec.version       = Azericard::VERSION
   spec.authors       = ["Nihad Abbasov"]
-  spec.email         = ["mail@narkoz.me"]
+  spec.email         = ["nihad@42na.in"]
   spec.description   = "Provides an interface to AzeriCard online payment processing system"
   spec.summary       = "Unoffical gem to provide a ruby interface for Azericard electronic payment system"
   spec.homepage      = "https://github.com/narkoz/azericard"
