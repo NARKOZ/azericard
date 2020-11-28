@@ -38,7 +38,7 @@ module Azericard
       response = request.run
 
       if response.success?
-        if response.body == '0'
+        if response.body.strip == '0'
           true
         else
           raise AzericardResponseError, "Azericard responded with: #{response.body[0..4]}"
