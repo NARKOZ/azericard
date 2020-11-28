@@ -6,7 +6,7 @@ module Azericard
     ].freeze
     DEFAULT_USER_AGENT = "Azericard Ruby Gem #{Azericard::VERSION}".freeze
 
-    attr_accessor *VALID_OPTIONS_KEYS
+    attr_accessor(*VALID_OPTIONS_KEYS)
 
     def self.extended(base)
       base.reset
