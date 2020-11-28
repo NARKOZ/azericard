@@ -18,6 +18,7 @@ module Azericard
         ssl_verifyhost: 2,
         sslversion: 'tlsv1.2',
         ssl_cipher_list: 'ECDHE-RSA-AES256-GCM-SHA384',
+        verbose: Azericard.debug,
         headers: {
           "User-Agent" => Azericard.user_agent
         },

@@ -15,6 +15,7 @@ class ConfigurationTest < Minitest::Test
     Azericard.merchant_url   = 'https://merchant.example.com'
     Azericard.country_code   = 'AZ'
     Azericard.gmt_offset     = '+4'
+    Azericard.debug          = true
 
     assert_equal 'https://example.com/cgi-bin/cgi_link', Azericard.endpoint
     assert_equal '12345678', Azericard.terminal
@@ -24,6 +25,7 @@ class ConfigurationTest < Minitest::Test
     assert_equal 'https://merchant.example.com', Azericard.merchant_url
     assert_equal 'AZ', Azericard.country_code
     assert_equal '+4', Azericard.gmt_offset
+    assert Azericard.debug
   end
 
   def test_user_agent
